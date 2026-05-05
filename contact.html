@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Swim School</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+:root{--primary:#0ea5e9;--dark:#0f172a;--light:#f8fafc;--text:#0f172a;--white:#fff;}
+html.dark{--light:#0f172a;--text:#f1f5f9;--white:#1e293b;}
+body{background:var(--light);color:var(--text);} 
+header{display:flex;justify-content:space-between;align-items:center;padding:20px;background:var(--white);} 
+nav a{margin:0 15px;text-decoration:none;color:var(--text);} 
+.section{padding:60px 20px;text-align:center;} 
+input,textarea{width:100%;padding:10px;margin:10px 0;border-radius:6px;border:1px solid #ccc;} 
+.btn{background:var(--primary);color:#fff;padding:12px;border:none;border-radius:6px;} 
+footer{padding:30px;text-align:center;background:#000;color:#fff;} 
+.watermark{opacity:0.4;font-size:12px;margin-top:10px;}
+.toggle{cursor:pointer;}
+</style>
+</head>
+<body>
+<header>
+<h2>🏊 Swim School</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="programs.html">Programs</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="toggle" onclick="toggleTheme()">🌙</div>
+</header>
+<section class="section">
+<h1>Contact Us</h1>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message"></textarea>
+<button class="btn">Send Message</button>
+</form>
+</section>
+<footer>
+<p>© 2026 Swim School</p>
+<div class="watermark">Powered by Animo Holdings</div>
+</footer>
+<script>
+function toggleTheme(){document.documentElement.classList.toggle('dark');}
+</script>
+</body>
+</html>
