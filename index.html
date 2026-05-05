@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Champions Boxing Gym</title>
+<title>Aqua Swim School</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -16,14 +16,16 @@
 }
 
 :root {
-  --primary: #e11d48;
+  --primary: #0ea5e9;
   --bg: #ffffff;
-  --text: #111;
+  --text: #0f172a;
+  --card: #f1f5f9;
 }
 
 html.dark-mode {
   --bg: #0f172a;
   --text: #f1f5f9;
+  --card: #1e293b;
 }
 
 body {
@@ -38,10 +40,11 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 18px 40px;
+  background: var(--bg);
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   position: sticky;
   top: 0;
-  background: var(--bg);
+  z-index: 100;
 }
 
 .logo {
@@ -66,12 +69,11 @@ nav a:hover {
   color: var(--primary);
 }
 
-.btn {
-  padding: 10px 18px;
-  background: var(--primary);
-  color: white;
-  border: none;
-  border-radius: 8px;
+.toggle {
+  padding: 8px 12px;
+  border: 1px solid var(--text);
+  border-radius: 6px;
+  background: none;
   cursor: pointer;
 }
 
@@ -83,20 +85,55 @@ nav a:hover {
   justify-content: center;
   text-align: center;
   padding: 20px;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed') center/cover;
+  background:
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('https://images.unsplash.com/photo-1530549387789-4c1017266635?auto=format&fit=crop&w=1200&q=80') center/cover;
   color: white;
 }
 
 .hero h1 {
-  font-size: 50px;
+  font-size: 52px;
   margin-bottom: 15px;
 }
 
 .hero p {
   max-width: 600px;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  background: var(--primary);
+  color: white;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* SECTIONS */
+.section {
+  padding: 70px 40px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* WATERMARK */
@@ -108,13 +145,13 @@ nav a:hover {
   opacity: 0.4;
 }
 
-/* DARK MODE BUTTON */
-.toggle {
-  background: none;
-  border: 1px solid var(--text);
-  padding: 8px 12px;
-  border-radius: 6px;
-  cursor: pointer;
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+  color: white;
+  margin-top: 50px;
 }
 </style>
 </head>
@@ -122,7 +159,7 @@ nav a:hover {
 <body>
 
 <header>
-  <a class="logo" href="index.html">🥊 Champions Boxing</a>
+  <a class="logo" href="index.html">🏊 Aqua Swim School</a>
 
   <nav>
     <a href="index.html">Home</a>
@@ -136,11 +173,36 @@ nav a:hover {
 
 <section class="hero">
   <div>
-    <h1>Train Like a Champion</h1>
-    <p>Professional boxing training for beginners, amateurs, and competitive fighters.</p>
-    <a href="contact.html"><button class="btn">Join Now</button></a>
+    <h1>Learn to Swim with Confidence</h1>
+    <p>Professional swimming lessons for babies, kids, and adults in a safe and fun environment.</p>
+    <a href="programs.html" class="btn">View Programs</a>
   </div>
 </section>
+
+<section class="section">
+  <h2>Why Choose Us</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Certified Coaches</h3>
+      <p>Experienced instructors focused on safety and technique.</p>
+    </div>
+
+    <div class="card">
+      <h3>All Ages Welcome</h3>
+      <p>From beginners to advanced swimmers — everyone is welcome.</p>
+    </div>
+
+    <div class="card">
+      <h3>Safe Environment</h3>
+      <p>Warm pools and controlled learning environments for comfort.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Aqua Swim School
+</footer>
 
 <div class="watermark">Animo Holdings ©</div>
 
