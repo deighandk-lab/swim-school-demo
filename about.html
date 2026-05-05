@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About | Swim School</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+:root{
+  --primary:#0ea5e9;
+  --dark:#0f172a;
+  --light:#f8fafc;
+  --text:#0f172a;
+  --white:#fff;
+}
+
+html.dark{
+  --light:#0f172a;
+  --text:#f1f5f9;
+  --white:#1e293b;
+}
+
+body{
+  background:var(--light);
+  color:var(--text);
+  transition:0.3s;
+}
+
+/* HEADER */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px;
+  background:var(--white);
+}
+
+nav a{
+  margin:0 15px;
+  text-decoration:none;
+  color:var(--text);
+}
+
+nav a:hover{
+  color:var(--primary);
+}
+
+.toggle{
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* SECTION */
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.section h1{
+  font-size:40px;
+  margin-bottom:20px;
+  color:var(--primary);
+}
+
+.section p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.7;
+  margin-bottom:20px;
+  color:var(--text);
+}
+
+/* CARD */
+.card{
+  background:var(--white);
+  padding:30px;
+  margin:40px auto;
+  max-width:800px;
+  border-radius:12px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* FOOTER */
+footer{
+  padding:30px;
+  text-align:center;
+  background:#000;
+  color:#fff;
+}
+
+.watermark{
+  opacity:0.4;
+  font-size:12px;
+  margin-top:10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <h2>🏊 Swim School</h2>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="toggle" onclick="toggleTheme()">🌙</div>
+</header>
+
+<!-- ABOUT CONTENT -->
+<section class="section">
+  <h1>About Us</h1>
+
+  <div class="card">
+    <p>
+      Welcome to our Swim School — where confidence, safety, and skill development come together in the water.
+    </p>
+
+    <p>
+      We specialise in teaching swimmers of all ages, from beginners taking their first splash to advanced learners refining their technique.
+    </p>
+
+    <p>
+      Our mission is simple: to create strong, confident swimmers through professional coaching in a safe and fun environment.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Swim School</p>
+  <div class="watermark">Powered by Animo Holdings</div>
+</footer>
+
+<script>
+function toggleTheme(){
+  document.documentElement.classList.toggle('dark');
+}
+</script>
+
+</body>
+</html>
