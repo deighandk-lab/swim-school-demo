@@ -136,22 +136,39 @@ nav a:hover {
   transform: translateY(-5px);
 }
 
-/* WATERMARK */
-.watermark {
-  position: fixed;
-  bottom: 15px;
-  left: 15px;
-  font-size: 12px;
-  opacity: 0.4;
-}
-
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 30px;
   background: #000;
   color: white;
+  padding: 30px 20px;
   margin-top: 50px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.watermark {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -199,10 +216,14 @@ footer {
     </div>
   </div>
 </section>
+
 <footer>
-<p>© 2026 Swim School</p>
-<div class="watermark">Powered by Animo Holdings</div>
+  <div class="footer-content">
+    <p class="footer-text">© 2026 Aqua Swim School. All rights reserved.</p>
+    <p class="watermark">Powered by Animo Holdings</p>
+  </div>
 </footer>
+
 <script>
 function toggleTheme() {
   document.documentElement.classList.toggle('dark-mode');
